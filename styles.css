@@ -1524,3 +1524,510 @@ footer ul li a:hover { color: var(--gold); }
   background: rgba(255,255,255,0.1);
   margin: 10px 28px;
 }
+
+/* ===== COMPREHENSIVE MOBILE FIXES ===== */
+/* These styles ONLY apply to mobile (768px and below) and do NOT affect desktop */
+
+@media (max-width: 768px) {
+  /* Hero Section - Mobile Optimization */
+  .hero {
+    min-height: auto;
+    padding: 100px 0 60px;
+    min-height: 85vh;
+  }
+  
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px 40px;
+    max-width: 100%;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 28px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .hero-btns {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .hero-btns .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+  
+  /* Hero Trust Badges */
+  .hero-trust {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+    margin-top: 32px;
+    padding: 0 10px;
+  }
+  
+  .trust-item {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .trust-item span {
+    font-size: 0.7rem;
+    display: block;
+    margin-top: 4px;
+  }
+  
+  .trust-divider {
+    display: none;
+  }
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    bottom: 20px;
+  }
+  
+  .scroll-text {
+    font-size: 0.65rem;
+  }
+  
+  /* Container padding for mobile */
+  .container {
+    padding: 0 20px;
+  }
+  
+  /* Top bar - hide on very small screens */
+  .top-bar {
+    display: none;
+  }
+  
+  /* Navbar adjustments */
+  .navbar {
+    padding: 8px 0;
+  }
+  
+  .navbar .container {
+    padding: 10px 16px;
+  }
+  
+  .nav-logo img {
+    height: 36px;
+  }
+  
+  /* Section spacing */
+  section {
+    padding: 60px 0;
+  }
+  
+  .page-content {
+    padding: 50px 0;
+  }
+  
+  /* Typography adjustments */
+  .section-title {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    margin-bottom: 16px;
+  }
+  
+  .section-sub {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    padding: 0 10px;
+  }
+  
+  /* Hero pills on inner pages */
+  .page-hero .hero-pills {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 10px;
+  }
+  
+  .benefit-pill {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .hero-wide-text {
+    padding: 0 20px !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Form adjustments */
+  .contact-form {
+    padding: 28px 20px;
+    margin: 0 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Phone input on mobile */
+  .phone-code-select {
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    flex: 0 0 60px !important;
+    padding: 11px 2px 11px 4px;
+    font-size: 0.85rem;
+  }
+  
+  /* Cards and blocks */
+  .content-block {
+    padding: 24px 20px;
+  }
+  
+  .sidebar-card {
+    padding: 24px 20px;
+  }
+  
+  .service-card {
+    padding: 28px 22px;
+  }
+  
+  .vacancy-card {
+    padding: 20px;
+  }
+  
+  /* CTA band */
+  .cta-band {
+    padding: 40px 20px;
+  }
+  
+  .cta-band-inner {
+    gap: 32px;
+  }
+  
+  .cta-option {
+    padding: 0 10px;
+  }
+  
+  /* Feature grids */
+  .feature-grid,
+  .feature-grid.reverse {
+    gap: 30px;
+  }
+  
+  .feature-visual img {
+    border-radius: var(--radius);
+  }
+  
+  /* Accordion adjustments */
+  .how-header {
+    padding: 16px 0;
+  }
+  
+  .how-title {
+    font-size: 1.1rem;
+  }
+  
+  .how-body {
+    padding: 0 0 20px;
+  }
+  
+  /* Stats grid */
+  .stats-grid {
+    gap: 0;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  /* Footer */
+  .footer-grid {
+    gap: 28px;
+    text-align: center;
+  }
+  
+  .footer-brand {
+    align-items: center;
+  }
+  
+  .footer-brand p {
+    max-width: 100%;
+  }
+  
+  /* Bottom cards */
+  .bottom-cards-row,
+  .bottom-cards-row.three-col {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  /* Service detail pages */
+  .service-detail h2 {
+    font-size: 1.3rem;
+    margin: 32px 0 12px;
+  }
+  
+  .service-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  /* Listings widget container */
+  .listings-widget-container {
+    margin-top: 28px;
+    padding: 0 10px;
+  }
+  
+  /* Breadcrumb */
+  .breadcrumb {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  /* How it works mobile improvements */
+  .how-grid {
+    gap: 12px;
+  }
+  
+  .how-card {
+    padding: 20px;
+  }
+  
+  .how-card-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+  }
+  
+  .how-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .how-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  /* About section */
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  /* Contact blocks */
+  .contact-info-blocks {
+    gap: 16px;
+  }
+  
+  .contact-block {
+    padding: 20px;
+  }
+  
+  .contact-block-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-block-content h4 {
+    font-size: 0.95rem;
+  }
+  
+  .contact-block-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small screens (480px and below) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 0 50px;
+    min-height: 80vh;
+  }
+  
+  .hero-content {
+    padding: 40px 16px 30px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    margin-bottom: 16px;
+  }
+  
+  .hero-sub {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    margin-bottom: 12px;
+  }
+  
+  .hero-btns .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-trust {
+    gap: 12px 16px;
+    margin-top: 24px;
+  }
+  
+  .trust-item {
+    font-size: 1.1rem;
+  }
+  
+  .trust-item span {
+    font-size: 0.65rem;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section-title {
+    font-size: clamp(1.4rem, 6vw, 1.7rem);
+  }
+  
+  .section-sub {
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+  
+  .contact-form {
+    padding: 24px 16px;
+    margin: 0 5px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 11px 12px;
+  }
+  
+  .phone-code-select {
+    width: 55px !important;
+    min-width: 55px !important;
+    max-width: 55px !important;
+    flex: 0 0 55px !important;
+    padding: 11px 2px;
+    font-size: 0.8rem;
+  }
+  
+  .page-hero {
+    padding: 70px 0 50px;
+  }
+  
+  .page-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+  }
+  
+  .page-hero .hero-pills {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .benefit-pill {
+    padding: 10px;
+    font-size: 0.8rem;
+    justify-content: center;
+  }
+  
+  .hero-wide-text {
+    font-size: 0.95rem !important;
+    padding: 0 16px !important;
+  }
+  
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  .service-card {
+    padding: 24px 18px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cta-band {
+    padding: 32px 16px;
+  }
+  
+  .cta-option h3 {
+    font-size: 1.2rem;
+  }
+  
+  .cta-option p {
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+  
+  /* Hamburger drawer */
+  .hbg-drawer {
+    min-width: 220px;
+    max-width: 85vw;
+  }
+  
+  .hbg-nav a {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+  
+  .hbg-close {
+    font-size: 1.3rem;
+    padding: 16px 20px;
+  }
+}
