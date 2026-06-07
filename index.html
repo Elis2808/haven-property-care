@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haven Property Care | Property Management Florida</title>
+  <meta name="description" content="A local, friendly, family-owned property management company committed to protecting your investment and providing reliable, stress-free service across Florida." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=141" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <span><a href="mailto:info@havenpropertiescare.com">info@havenpropertiescare.com</a></span>
+      <span><a href="tel:+1">Call Us Today</a></span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Haven Property Care" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown">
+          <a href="#services">Services ▾</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <a href="services-management.html">Property Management</a>
+              <a href="services-preservation.html">Property Preservation</a>
+              <a href="services-maintenance.html">Maintenance &amp; Repairs</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="vacancies.html">Vacancies</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-login">Login ▾</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a>
+              <a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-72b0acb3-0ccc-4518-a3c7-ba3a3636017c&redirect_uri=https%3A%2F%2Fhavenpropertycarellc.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid+offline_access" target="_blank">Tenant Portal</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HAMBURGER DRAWER -->
+  <div class="hbg-overlay" id="hbgOverlay"></div>
+  <div class="hbg-drawer" id="hbgDrawer">
+    <button class="hbg-close" id="hbgClose">&#10005;</button>
+    <nav class="hbg-nav">
+      <a href="index.html">Home</a>
+      <a href="services-management.html">Property Management</a>
+      <a href="services-preservation.html">Property Preservation</a>
+      <a href="services-maintenance.html">Maintenance &amp; Repairs</a>
+      <a href="vacancies.html">Vacancies</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <div class="hbg-divider"></div>
+      <a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a>
+      <a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-72b0acb3-0ccc-4518-a3c7-ba3a3636017c&redirect_uri=https%3A%2F%2Fhavenpropertycarellc.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid+offline_access" target="_blank">Tenant Portal</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <video id="heroDroneA" class="hero-video" autoplay muted playsinline preload="auto" style="visibility:visible;">
+      <source src="videos/drone.mp4" type="video/mp4" />
+    </video>
+    <video id="heroDroneB" class="hero-video" muted playsinline preload="auto" style="visibility:hidden;">
+      <source src="videos/drone-rev.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="hero-eyebrow">Florida Property Management</span>
+      <h1>Haven Property Care</h1>
+      <p class="hero-sub">Family-owned property management serving Florida. We handle everything from tenant placement to maintenance coordination so you can enjoy stress-free ownership.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn btn-gold">Get Free Evaluation</a>
+        <a href="services-management.html" class="btn btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">500+ <span>Properties Managed</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">10+ <span>Years Experience</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">24/7 <span>Support</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">Family <span>Owned</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      var a = document.getElementById('heroDroneA');
+      var b = document.getElementById('heroDroneB');
+      if (!a || !b) return;
+      var swapping = false;
+
+      function swapTo(show, hide) {
+        if (swapping) return;
+        swapping = true;
+        hide.pause();
+        hide.currentTime = 0;
+        hide.style.visibility = 'hidden';
+        show.currentTime = 0;
+        show.style.visibility = 'visible';
+        var p = show.play();
+        if (p && p.catch) p.catch(function(){});
+        setTimeout(function() { swapping = false; }, 300);
+      }
+
+      a.addEventListener('ended', function() { swapTo(b, a); });
+      b.addEventListener('ended', function() { swapTo(a, b); });
+
+      b.load();
+      b.addEventListener('canplaythrough', function() {
+        b.pause();
+        b.currentTime = 0;
+      }, { once: true });
+
+      var pa = a.play();
+      if (pa && pa.catch) pa.catch(function() {});
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburgerBtn');
+      var drawer = document.getElementById('hbgDrawer');
+      var overlay = document.getElementById('hbgOverlay');
+      var close = document.getElementById('hbgClose');
+      function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); }
+      function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+      if (btn) btn.addEventListener('click', openDrawer);
+      if (close) close.addEventListener('click', closeDrawer);
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(function(dd) {
+        var menu = dd.querySelector('.dropdown-menu');
+        var t;
+        var trigger = dd.querySelector('a');
+        // Move menu to body so position:fixed works correctly (nav-links has transform which breaks fixed positioning)
+        document.body.appendChild(menu);
+        var isLogin = !!trigger.classList.contains('nav-login');
+        function positionMenu() {
+          var rect = trigger.getBoundingClientRect();
+          menu.style.top = (rect.bottom + 12) + 'px';
+          menu.style.minWidth = isLogin ? '160px' : '240px';
+          if (rect.left + (isLogin ? 160 : 240) > window.innerWidth - 8) {
+            menu.style.left = 'auto';
+            menu.style.right = (window.innerWidth - rect.right) + 'px';
+          } else {
+            menu.style.left = rect.left + 'px';
+            menu.style.right = 'auto';
+          }
+        }
+        dd.addEventListener('mouseenter', function(e) {
+          if (!dd.contains(e.relatedTarget)) {
+            clearTimeout(t);
+            positionMenu();
+            dd.classList.add('open');
+            menu.style.display = 'block';
+          }
+        });
+        dd.addEventListener('mouseleave', function(e) {
+          clearTimeout(t);
+          t = setTimeout(function() {
+            dd.classList.remove('open');
+            menu.style.display = 'none';
+          }, 120);
+        });
+        menu.addEventListener('mouseenter', function() {
+          clearTimeout(t);
+        });
+        menu.addEventListener('mouseleave', function() {
+          clearTimeout(t);
+          t = setTimeout(function() {
+            dd.classList.remove('open');
+            menu.style.display = 'none';
+          }, 120);
+        });
+      });
+    });
+  </script>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item"><strong>100%</strong><span>Stress-Free Ownership</span></div>
+      <div class="stat-item"><strong>24/7</strong><span>Emergency Response</span></div>
+      <div class="stat-item"><strong>Florida</strong><span>Statewide Coverage</span></div>
+      <div class="stat-item"><strong>Family</strong><span>Owned &amp; Operated</span></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Complete Property Management</h2>
+        <p class="section-sub">Everything your investment needs. One trusted team.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Property Management</h3>
+          <p>End-to-end management for single-family and multi-family properties. Marketing, tenant screening, rent collection, and 24/7 support.</p>
+          <a href="services-management.html" class="card-link">Explore <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Property Preservation</h3>
+          <p>White-glove care for upscale residences. Regular inspections, maintenance, and peace of mind while you're away.</p>
+          <a href="services-preservation.html" class="card-link">Explore <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Maintenance &amp; Repairs</h3>
+          <p>24/7 emergency response. Vetted local vendors. Preventative maintenance that protects your investment.</p>
+          <a href="services-maintenance.html" class="card-link">Explore <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="how">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">How We Work</h2>
+        <p class="section-sub">Hands-off ownership. Professional systems. Dedicated team.</p>
+      </div>
+      <div class="how-layout">
+        <div class="how-icons">
+          <button class="acc-btn active" data-step="1" data-title="Marketing &amp; Screening" data-body="Professional photography, MLS and Zillow listings, and thorough tenant screening including credit, background, and income verification. We place the right tenant the first time.">
+            <div class="acc-icon-wrap"><img src="images/PropertyMarketing.png" alt="" class="acc-icon" /></div><span>Marketing &amp; Tenant Screening</span>
+          </button>
+          <button class="acc-btn" data-step="2" data-title="Lease Administration" data-body="Florida-compliant lease agreements, digital signatures, and complete lifecycle management. Every deadline met, every document accurate.">
+            <div class="acc-icon-wrap"><img src="images/LeaseAndSetup.png" alt="" class="acc-icon" /></div><span>Lease Administration</span>
+          </button>
+          <button class="acc-btn" data-step="3" data-title="Daily Management" data-body="We're the primary contact for your tenants. Rent collection, service requests, conflict resolution. We handle it all so you never have to.">
+            <div class="acc-icon-wrap"><img src="images/TennatRekations.png" alt="" class="acc-icon" /></div><span>Daily Management</span>
+          </button>
+          <button class="acc-btn" data-step="4" data-title="Maintenance Coordination" data-body="24/7 emergency response. Vetted local vendors. Preventative maintenance programs that catch issues before they become expensive problems.">
+            <div class="acc-icon-wrap"><img src="images/MAINTENANCE.png" alt="" class="acc-icon" /></div><span>Maintenance &amp; Repairs</span>
+          </button>
+          <button class="acc-btn" data-step="5" data-title="Property Inspections" data-body="Move-in, move-out, and periodic inspections with detailed documentation. We ensure your property is cared for and lease terms are honored.">
+            <div class="acc-icon-wrap"><img src="images/property inspections.png" alt="" class="acc-icon" /></div><span>Property Inspections</span>
+          </button>
+          <button class="acc-btn" data-step="6" data-title="Financial Reporting" data-body="Monthly owner statements and 24/7 online portal access. Track income, expenses, and maintenance in real time. Complete transparency.">
+            <div class="acc-icon-wrap"><img src="images/owner reporting.png" alt="" class="acc-icon" /></div><span>Financial Reporting</span>
+          </button>
+          <button class="acc-btn" data-step="7" data-title="Portfolio Management" data-body="Centralized reporting and a single point of contact for multiple properties. Whether you own 2 units or 20, we scale with you.">
+            <div class="acc-icon-wrap"><img src="images/multiproperty.png" alt="" class="acc-icon" /></div><span>Portfolio Management</span>
+          </button>
+          <button class="acc-btn" data-step="8" data-title="Legal Support" data-body="Professional handling of lease violations, notices, and legal processes. We protect your rights while resolving issues efficiently.">
+            <div class="acc-icon-wrap"><img src="images/eviction.png" alt="" class="acc-icon" /></div><span>Legal Support</span>
+          </button>
+        </div>
+
+        <div class="how-detail" id="howDetail">
+          <img src="images/PropertyMarketing.png" alt="" class="how-detail-icon" id="howDetailIcon" />
+          <h4 id="howDetailTitle">Property Marketing &amp; Tenant Screening</h4>
+          <p id="howDetailBody">Professional photography, MLS and Zillow listings, and thorough tenant screening including credit, background, and income verification. We place the right tenant the first time.</p>
+        </div>
+      </div>
+
+      <script>
+        (function() {
+          var btns = document.querySelectorAll('.acc-btn');
+          var title = document.getElementById('howDetailTitle');
+          var body = document.getElementById('howDetailBody');
+          var icon = document.getElementById('howDetailIcon');
+          btns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              btns.forEach(function(b) { b.classList.remove('active'); });
+              btn.classList.add('active');
+              title.innerHTML = btn.getAttribute('data-title');
+              body.textContent = btn.getAttribute('data-body');
+              icon.src = btn.querySelector('.acc-icon').src;
+            });
+          });
+        })();
+      </script>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Let's Talk</h2>
+        <p class="section-sub">Free property evaluation. No obligation.</p>
+      </div>
+      <div class="contact-info-blocks">
+        <div class="contact-block">
+          <div class="contact-block-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email Us</h4>
+            <a href="mailto:info@havenpropertiescare.com">info@havenpropertiescare.com</a>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-block-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Based In</h4>
+            <p>Florida, USA</p>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-block-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.41 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+          </div>
+          <div>
+            <h4>Call Us</h4>
+            <a href="tel:+1">Contact Us Today</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request a Free Evaluation</h3>
+        <form id="evaluationForm">
+          <div class="contact-form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <div class="phone-input-row">
+                <select id="phone-code" name="phone_code" class="phone-code-select">
+                  <option value="+1">+ 🇺🇸</option>
+                  <option value="+1">+ 🇨🇦</option>
+                  <option value="+7">+ 🇷🇺</option>
+                  <option value="+20">+ 🇪🇬</option>
+                  <option value="+27">+ 🇿🇦</option>
+                  <option value="+30">+ 🇬🇷</option>
+                  <option value="+31">+ 🇳🇱</option>
+                  <option value="+32">+ 🇧🇪</option>
+                  <option value="+33">+ 🇫🇷</option>
+                  <option value="+34">+ 🇪🇸</option>
+                  <option value="+36">+ 🇭🇺</option>
+                  <option value="+39">+ 🇮🇹</option>
+                  <option value="+40">+ 🇷🇴</option>
+                  <option value="+41">+ 🇨🇭</option>
+                  <option value="+43">+ 🇦🇹</option>
+                  <option value="+44">+ 🇬🇧</option>
+                  <option value="+45">+ 🇩🇰</option>
+                  <option value="+46">+ 🇸🇪</option>
+                  <option value="+47">+ 🇳🇴</option>
+                  <option value="+48">+ 🇵🇱</option>
+                  <option value="+49">+ 🇩🇪</option>
+                  <option value="+51">+ 🇵🇪</option>
+                  <option value="+52">+ 🇲🇽</option>
+                  <option value="+53">+ 🇨🇺</option>
+                  <option value="+54">+ 🇦🇷</option>
+                  <option value="+55">+ 🇧🇷</option>
+                  <option value="+56">+ 🇨🇱</option>
+                  <option value="+57">+ 🇨🇴</option>
+                  <option value="+58">+ 🇻🇪</option>
+                  <option value="+60">+ 🇲🇾</option>
+                  <option value="+61">+ 🇦🇺</option>
+                  <option value="+62">+ 🇮🇩</option>
+                  <option value="+63">+ 🇵🇭</option>
+                  <option value="+64">+ 🇳🇿</option>
+                  <option value="+65">+ 🇸🇬</option>
+                  <option value="+66">+ 🇹🇭</option>
+                  <option value="+81">+ 🇯🇵</option>
+                  <option value="+82">+ 🇰🇷</option>
+                  <option value="+84">+ 🇻🇳</option>
+                  <option value="+86">+ 🇨🇳</option>
+                  <option value="+90">+ 🇹🇷</option>
+                  <option value="+91">+ 🇮🇳</option>
+                  <option value="+92">+ 🇵🇰</option>
+                  <option value="+93">+ 🇦🇫</option>
+                  <option value="+94">+ 🇱🇰</option>
+                  <option value="+95">+ 🇲🇲</option>
+                  <option value="+98">+ 🇮🇷</option>
+                  <option value="+212">+ 🇲🇦</option>
+                  <option value="+213">+ 🇩🇿</option>
+                  <option value="+216">+ 🇹🇳</option>
+                  <option value="+218">+ 🇱🇾</option>
+                  <option value="+220">+ 🇬🇲</option>
+                  <option value="+221">+ 🇸🇳</option>
+                  <option value="+234">+ 🇳🇬</option>
+                  <option value="+254">+ 🇰🇪</option>
+                  <option value="+255">+ 🇹🇿</option>
+                  <option value="+256">+ 🇺🇬</option>
+                  <option value="+260">+ 🇿🇲</option>
+                  <option value="+263">+ 🇿🇼</option>
+                  <option value="+351">+ 🇵🇹</option>
+                  <option value="+352">+ 🇱🇺</option>
+                  <option value="+353">+ 🇮🇪</option>
+                  <option value="+354">+ 🇮🇸</option>
+                  <option value="+355">+ 🇦🇱</option>
+                  <option value="+356">+ 🇲🇹</option>
+                  <option value="+357">+ 🇨🇾</option>
+                  <option value="+358">+ 🇫🇮</option>
+                  <option value="+359">+ 🇧🇬</option>
+                  <option value="+370">+ 🇱🇹</option>
+                  <option value="+371">+ 🇱🇻</option>
+                  <option value="+372">+ 🇪🇪</option>
+                  <option value="+380">+ 🇺🇦</option>
+                  <option value="+381">+ 🇷🇸</option>
+                  <option value="+385">+ 🇭🇷</option>
+                  <option value="+386">+ 🇸🇮</option>
+                  <option value="+420">+ 🇨🇿</option>
+                  <option value="+421">+ 🇸🇰</option>
+                  <option value="+502">+ 🇬🇹</option>
+                  <option value="+503">+ 🇸🇻</option>
+                  <option value="+504">+ 🇭🇳</option>
+                  <option value="+505">+ 🇳🇮</option>
+                  <option value="+506">+ 🇨🇷</option>
+                  <option value="+507">+ 🇵🇦</option>
+                  <option value="+593">+ 🇪🇨</option>
+                  <option value="+595">+ 🇵🇾</option>
+                  <option value="+598">+ 🇺🇾</option>
+                  <option value="+852">+ 🇭🇰</option>
+                  <option value="+853">+ 🇲🇴</option>
+                  <option value="+886">+ 🇹🇼</option>
+                  <option value="+960">+ 🇲🇻</option>
+                  <option value="+961">+ 🇱🇧</option>
+                  <option value="+962">+ 🇯🇴</option>
+                  <option value="+963">+ 🇸🇾</option>
+                  <option value="+964">+ 🇮🇶</option>
+                  <option value="+965">+ 🇰🇼</option>
+                  <option value="+966">+ 🇸🇦</option>
+                  <option value="+967">+ 🇾🇪</option>
+                  <option value="+968">+ 🇴🇲</option>
+                  <option value="+971">+ 🇦🇪</option>
+                  <option value="+972">+ 🇮🇱</option>
+                  <option value="+973">+ 🇧🇭</option>
+                  <option value="+974">+ 🇶🇦</option>
+                  <option value="+975">+ 🇧🇹</option>
+                  <option value="+976">+ 🇲🇳</option>
+                  <option value="+977">+ 🇳🇵</option>
+                  <option value="+992">+ 🇹🇯</option>
+                  <option value="+993">+ 🇹🇲</option>
+                  <option value="+994">+ 🇦🇿</option>
+                  <option value="+995">+ 🇬🇪</option>
+                  <option value="+996">+ 🇰🇬</option>
+                  <option value="+998">+ 🇺🇿</option>
+                </select>
+                <input type="tel" id="phone" name="phone" placeholder="000-0000" required />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="status">Property Status</label>
+            <select id="status" name="property_status">
+              <option value="" disabled selected>Select property status...</option>
+              <option value="Vacant">Vacant</option>
+              <option value="Tenant Occupied">Tenant Occupied</option>
+              <option value="Owner Occupied">Owner Occupied</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Property Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your property..."></textarea>
+          </div>
+          <p class="form-disclaimer">By opting in, you agree to receive communications from Haven Property Care.</p>
+          <button type="submit" class="btn btn-outline btn-full" id="submitBtn">Submit Request</button>
+          <p id="formStatus" style="margin-top:12px;font-size:0.88rem;text-align:center;display:none;"></p>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+          emailjs.init('a7lCmabaS-UUGhLDs');
+          document.getElementById('evaluationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = document.getElementById('submitBtn');
+            var status = document.getElementById('formStatus');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            emailjs.sendForm('service_qwp6642', 'template_ao6ig7a', this)
+              .then(function() {
+                btn.textContent = 'Submit Request';
+                btn.disabled = false;
+                status.style.display = 'block';
+                status.style.color = 'rgba(176,184,193,0.9)';
+                status.textContent = 'Thank you for submitting! We\'ll get back to you shortly.';
+                document.getElementById('evaluationForm').reset();
+              }, function(error) {
+                btn.textContent = 'Submit Request';
+                btn.disabled = false;
+                status.style.display = 'block';
+                status.style.color = '#e07070';
+                status.textContent = 'Error: ' + (error.text || error.status || JSON.stringify(error));
+                console.error('EmailJS error:', error);
+              });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>Haven Property Care</strong>
+          <span>Property Management &amp; Preservation</span>
+          <p>Family-owned. Florida-focused. Serving property owners since 2015.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-management.html">Property Management</a></li>
+            <li><a href="services-preservation.html">Property Preservation</a></li>
+            <li><a href="services-maintenance.html">Maintenance &amp; Repairs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="vacancies.html">Vacancies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a></li>
+            <li><a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-72b0acb3-0ccc-4518-a3c7-ba3a3636017c&redirect_uri=https%3A%2F%2Fhavenpropertycarellc.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid+offline_access" target="_blank">Tenant Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Haven Property Care LLC. All rights reserved. &nbsp;|&nbsp; <a href="contact.html">Contact Us</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var t=document.querySelector('.nav-toggle');
+    if(t) t.addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Preservation | Haven Property Care</title>
+  <meta name="description" content="Premium property preservation services for upscale Florida residences. We protect, maintain, and manage your home with precision ,  even when you're away." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=142" />
+  <link rel="stylesheet" href="services-management.css?v=2" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <span><a href="mailto:info@havenpropertiescare.com">info@havenpropertiescare.com</a></span>
+      <span><a href="tel:+1">Call Us Today</a></span>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Haven Property Care" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services">Services ▾</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <a href="services-management.html">Property Management</a>
+              <a href="services-preservation.html">Property Preservation</a>
+              <a href="services-maintenance.html">Maintenance &amp; Repairs</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="vacancies.html">Vacancies</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-login">Login ▾</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a>
+              <a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-72b0acb3-0ccc-4518-a3c7-ba3a3636017c&redirect_uri=https%3A%2F%2Fhavenpropertycarellc.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid+offline_access" target="_blank">Tenant Portal</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HAMBURGER DRAWER -->
+  <div class="hbg-overlay" id="hbgOverlay"></div>
+  <div class="hbg-drawer" id="hbgDrawer">
+    <button class="hbg-close" id="hbgClose">&#10005;</button>
+    <nav class="hbg-nav">
+      <a href="index.html">Home</a>
+      <a href="services-management.html">Property Management</a>
+      <a href="services-preservation.html">Property Preservation</a>
+      <a href="services-maintenance.html">Maintenance &amp; Repairs</a>
+      <a href="vacancies.html">Vacancies</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <div class="hbg-divider"></div>
+      <a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a>
+      <a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-72b0acb3-0ccc-4518-a3c7-ba3a3636017c&redirect_uri=https%3A%2F%2Fhavenpropertycarellc.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid+offline_access" target="_blank">Tenant Portal</a>
+    </nav>
+  </div>
+
+  <div class="page-hero dark-hero">
+    <div class="container wide">
+      <h1>Property Preservation Services</h1>
+      <p class="hero-wide-text">At Haven Property Care, we specialize in property preservation for upscale residences across Florida. Our services are fully customized to meet the exact needs and expectations of each homeowner, ensuring your property receives the highest level of care even when you're away.</p>
+      <div class="hero-pills">
+        <div class="benefit-pill" data-benefit="watch">
+          <span class="benefit-icon">✓</span>
+          <span class="benefit-text">Home Watch</span>
+        </div>
+        <div class="benefit-pill" data-benefit="inspect">
+          <span class="benefit-icon">✓</span>
+          <span class="benefit-text">Regular Inspections</span>
+        </div>
+        <div class="benefit-pill" data-benefit="protect">
+          <span class="benefit-icon">✓</span>
+          <span class="benefit-text">Complete Protection</span>
+        </div>
+        <div class="benefit-pill" data-benefit="peace">
+          <span class="benefit-icon">✓</span>
+          <span class="benefit-text">Peace of Mind</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <section class="page-content light">
+    <div class="container">
+      <!-- Row 1 -->
+      <div class="content-grid-2">
+        <div class="service-card no-icon">
+          <h3>Home Watch Services</h3>
+          <p>Regular visual inspections of your property's interior and exterior. We check for leaks, pest issues, security concerns, and weather damage while you're away.</p>
+          <img src="images/img-preservation.png" alt="Home Watch Services" />
+        </div>
+
+        <div class="service-card no-icon">
+          <h3>Storm Preparation</h3>
+          <p>Pre-hurricane inspections and preparation. We secure outdoor items, check shutters, and ensure your property is ready for severe weather before you return.</p>
+          <img src="images/img-storm-preperation.png" alt="Storm Preparation" />
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="content-grid-2">
+        <div class="service-card no-icon">
+          <h3>Vendor Coordination</h3>
+          <p>We manage trusted local contractors for repairs, maintenance, and improvements. You approve all work. We handle the scheduling and supervision.</p>
+          <img src="images/img-inspections.png" alt="Vendor Coordination" />
+        </div>
+
+        <div class="service-card no-icon">
+          <h3>Security Monitoring</h3>
+          <p>Peace of mind with regular security checks. We verify alarms, locks, and surveillance systems are functioning properly while you're away.</p>
+          <img src="images/img-security.png" alt="Security Monitoring" />
+        </div>
+      </div>
+
+      <!-- Premium CTA Band -->
+      <div class="cta-band">
+        <div class="cta-band-inner">
+          <div class="cta-option">
+            <span class="cta-label">Our Services</span>
+            <h3>Explore More</h3>
+            <p>Comprehensive property solutions tailored to your needs.</p>
+            <div class="service-buttons">
+              <a href="services-management.html" class="card-link">Management <span>→</span></a>
+              <a href="services-maintenance.html" class="card-link">Maintenance <span>→</span></a>
+            </div>
+          </div>
+          <div class="cta-divider"></div>
+          <div class="cta-option">
+            <span class="cta-label">Free Evaluation</span>
+            <h3>Property Assessment</h3>
+            <p>No obligation. Discover your property's preservation needs.</p>
+            <a href="contact.html" class="card-link">Request Now <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>Haven Property Care</strong>
+          <span>Property Management &amp; Preservation</span>
+          <p>A local, family-owned property management company serving Florida property owners with excellence, professionalism, and complete peace of mind.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-management.html">Property Management</a></li>
+            <li><a href="services-preservation.html">Property Preservation</a></li>
+            <li><a href="services-maintenance.html">Maintenance &amp; Repairs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vacancies.html">Vacancies</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Haven Property Care LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburgerBtn');
+      var drawer = document.getElementById('hbgDrawer');
+      var overlay = document.getElementById('hbgOverlay');
+      var close = document.getElementById('hbgClose');
+      function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); }
+      function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+      if (btn) btn.addEventListener('click', openDrawer);
+      if (close) close.addEventListener('click', closeDrawer);
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+    })();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(function(dd) {
+        var menu = dd.querySelector('.dropdown-menu');
+        var t;
+        var trigger = dd.querySelector('a');
+        document.body.appendChild(menu);
+        var isLogin = !!trigger.classList.contains('nav-login');
+        function positionMenu() {
+          var rect = trigger.getBoundingClientRect();
+          menu.style.top = (rect.bottom + 12) + 'px';
+          menu.style.minWidth = isLogin ? '160px' : '240px';
+          if (rect.left + (isLogin ? 160 : 240) > window.innerWidth - 8) {
+            menu.style.left = 'auto';
+            menu.style.right = (window.innerWidth - rect.right) + 'px';
+          } else {
+            menu.style.left = rect.left + 'px';
+            menu.style.right = 'auto';
+          }
+        }
+        dd.addEventListener('mouseenter', function(e) {
+          if (!dd.contains(e.relatedTarget)) { clearTimeout(t); positionMenu(); dd.classList.add('open'); menu.style.display = 'block'; }
+        });
+        dd.addEventListener('mouseleave', function(e) {
+          clearTimeout(t); t = setTimeout(function() { dd.classList.remove('open'); menu.style.display = 'none'; }, 120);
+        });
+        menu.addEventListener('mouseenter', function() { clearTimeout(t); });
+        menu.addEventListener('mouseleave', function() {
+          clearTimeout(t); t = setTimeout(function() { dd.classList.remove('open'); menu.style.display = 'none'; }, 120);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
