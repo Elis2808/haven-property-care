@@ -1,0 +1,17 @@
+# Cache images for 1 year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache CSS and JS for 1 year
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache HTML for 1 hour (allows updates)
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Cache videos for 1 year
+/videos/*
+  Cache-Control: public, max-age=31536000, immutable
