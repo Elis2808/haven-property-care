@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haven Property Care | Property Management Florida</title>
   <meta name="description" content="A local, friendly, family-owned property management company committed to protecting your investment and providing reliable, stress-free service across Florida." />
+  <meta property="og:title" content="Haven Property Care | Property Management Florida" />
+  <meta property="og:description" content="Family-owned Florida property management. Tenant placement, maintenance, 24/7 support. Stress-free ownership." />
+  <meta property="og:image" content="https://havenpropertiescare.netlify.app/images/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://havenpropertiescare.netlify.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://havenpropertiescare.netlify.app/images/og-share.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=141" />
+  <link rel="stylesheet" href="styles.css?v=150" />
   <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
@@ -358,11 +367,11 @@
           <div class="contact-form-row">
             <div class="form-group">
               <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" required />
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="phone">Phone Number *</label>
@@ -480,7 +489,7 @@
                   <option value="+996">+ 🇰🇬</option>
                   <option value="+998">+ 🇺🇿</option>
                 </select>
-                <input type="tel" id="phone" name="phone" placeholder="000-0000" required />
+                <input type="tel" id="phone" name="phone" placeholder="000-0000" required autocomplete="tel" />
               </div>
             </div>
           </div>
@@ -537,6 +546,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
+          <img src="images/logo.png" alt="Haven Property Care" style="height:36px;width:auto;border-radius:0;margin-bottom:12px;" />
           <strong>Haven Property Care</strong>
           <span>Property Management &amp; Preservation</span>
           <p>Family-owned. Florida-focused. Serving property owners since 2015.</p>
@@ -557,6 +567,14 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="https://havenpropertycarellc.appfolio.com/oportal/users/log_in" target="_blank">Owner Portal</a></li>
             <li><a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-72b0acb3-0ccc-4518-a3c7-ba3a3636017c&redirect_uri=https%3A%2F%2Fhavenpropertycarellc.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid+offline_access" target="_blank">Tenant Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@havenpropertiescare.com">info@havenpropertiescare.com</a></li>
+            <li><a href="contact.html">Get Free Evaluation</a></li>
+            <li style="color:#8fa3b8;font-size:0.84rem;">Florida, USA</li>
           </ul>
         </div>
       </div>
