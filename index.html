@@ -7,16 +7,16 @@
   <meta name="description" content="A local, friendly, family-owned property management company committed to protecting your investment and providing reliable, stress-free service across Florida." />
   <meta property="og:title" content="Haven Property Care | Property Management Florida" />
   <meta property="og:description" content="Family-owned Florida property management. Tenant placement, maintenance, 24/7 support. Stress-free ownership." />
-  <meta property="og:image" content="https://havenpropertiescare.netlify.app/images/og-share.png" />
+  <meta property="og:image" content="https://havenpropertiescare.netlify.app/images/og-share-v2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://havenpropertiescare.netlify.app/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://havenpropertiescare.netlify.app/images/og-share.png" />
+  <meta name="twitter:image" content="https://havenpropertiescare.netlify.app/images/og-share-v2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=150" />
+  <link rel="stylesheet" href="styles.css?v=151" />
   <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
@@ -270,7 +270,8 @@
         <h2 class="section-title">How We Work</h2>
         <p class="section-sub">Hands-off ownership. Professional systems. Dedicated team.</p>
       </div>
-      <div class="how-layout">
+      <!-- Desktop layout (hidden on mobile via CSS) -->
+      <div class="how-layout how-desktop-only">
         <div class="how-icons">
           <button class="acc-btn active" data-step="1" data-title="Marketing &amp; Screening" data-body="Professional photography, MLS and Zillow listings, and thorough tenant screening including credit, background, and income verification. We place the right tenant the first time.">
             <div class="acc-icon-wrap"><img src="images/PropertyMarketing.png" alt="" class="acc-icon" loading="lazy" /></div><span>Marketing &amp; Tenant Screening</span>
@@ -297,7 +298,6 @@
             <div class="acc-icon-wrap"><img src="images/eviction.png" alt="" class="acc-icon" loading="lazy" /></div><span>Legal Support</span>
           </button>
         </div>
-
         <div class="how-detail" id="howDetail">
           <img src="images/PropertyMarketing.png" alt="" class="how-detail-icon" id="howDetailIcon" loading="lazy" />
           <h4 id="howDetailTitle">Property Marketing &amp; Tenant Screening</h4>
@@ -305,8 +305,77 @@
         </div>
       </div>
 
+      <!-- Mobile accordion (hidden on desktop via CSS) -->
+      <div class="how-mobile-accordion">
+        <div class="hma-item hma-open">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/PropertyMarketing.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Marketing &amp; Tenant Screening</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>Professional photography, MLS and Zillow listings, and thorough tenant screening including credit, background, and income verification. We place the right tenant the first time.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/LeaseAndSetup.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Lease Administration</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>Florida-compliant lease agreements, digital signatures, and complete lifecycle management. Every deadline met, every document accurate.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/TennatRekations.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Daily Management</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>We're the primary contact for your tenants. Rent collection, service requests, conflict resolution. We handle it all so you never have to.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/MAINTENANCE.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Maintenance &amp; Repairs</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>24/7 emergency response. Vetted local vendors. Preventative maintenance programs that catch issues before they become expensive problems.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/property inspections.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Property Inspections</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>Move-in, move-out, and periodic inspections with detailed documentation. We ensure your property is cared for and lease terms are honored.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/owner reporting.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Financial Reporting</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>Monthly owner statements and 24/7 online portal access. Track income, expenses, and maintenance in real time. Complete transparency.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/multiproperty.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Portfolio Management</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>Centralized reporting and a single point of contact for multiple properties. Whether you own 2 units or 20, we scale with you.</p></div>
+        </div>
+        <div class="hma-item">
+          <button class="hma-btn">
+            <div class="hma-icon-wrap"><img src="images/eviction.png" alt="" class="hma-icon" loading="lazy" /></div>
+            <span class="hma-title">Legal Support</span>
+            <span class="hma-chevron">&#8964;</span>
+          </button>
+          <div class="hma-body"><p>Professional handling of lease violations, notices, and legal processes. We protect your rights while resolving issues efficiently.</p></div>
+        </div>
+      </div>
+
       <script>
         (function() {
+          /* Desktop panel switcher */
           var btns = document.querySelectorAll('.acc-btn');
           var title = document.getElementById('howDetailTitle');
           var body = document.getElementById('howDetailBody');
@@ -318,6 +387,15 @@
               title.innerHTML = btn.getAttribute('data-title');
               body.textContent = btn.getAttribute('data-body');
               icon.src = btn.querySelector('.acc-icon').src;
+            });
+          });
+          /* Mobile accordion */
+          var items = document.querySelectorAll('.hma-item');
+          items.forEach(function(item) {
+            item.querySelector('.hma-btn').addEventListener('click', function() {
+              var isOpen = item.classList.contains('hma-open');
+              items.forEach(function(i) { i.classList.remove('hma-open'); });
+              if (!isOpen) item.classList.add('hma-open');
             });
           });
         })();

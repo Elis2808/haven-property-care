@@ -2209,3 +2209,182 @@ footer ul li a:hover { color: var(--gold); }
     position: relative;
   }
 }
+
+/* ===== HOW WE WORK — MOBILE ACCORDION ===== */
+.how-mobile-accordion {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
+}
+.hma-item {
+  background: #142c46;
+  border: 1px solid rgba(176,184,193,0.15);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.hma-item.hma-open {
+  border-color: rgba(176,184,193,0.35);
+}
+.hma-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 18px;
+  cursor: pointer;
+  text-align: left;
+  color: rgba(255,255,255,0.85);
+}
+.hma-icon-wrap {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hma-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+.hma-title {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.hma-chevron {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.4);
+  transition: transform 0.25s ease;
+  display: block;
+  line-height: 1;
+}
+.hma-item.hma-open .hma-chevron {
+  transform: rotate(180deg);
+}
+.hma-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.25s ease;
+  padding: 0 18px;
+}
+.hma-item.hma-open .hma-body {
+  max-height: 200px;
+  padding: 0 18px 16px;
+}
+.hma-body p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .how-desktop-only { display: none !important; }
+  .how-mobile-accordion { display: flex; }
+}
+@media (min-width: 769px) {
+  .how-mobile-accordion { display: none !important; }
+  .how-desktop-only { display: grid; }
+}
+
+/* ===== POLISH PASS 2 — MOBILE ===== */
+
+/* P2: Hero eyebrow blue text — subtle shadow for readability on video */
+@media (max-width: 768px) {
+  .hero-eyebrow {
+    text-shadow: 0 1px 6px rgba(0,0,0,0.7), 0 0 12px rgba(0,0,0,0.4);
+  }
+}
+
+/* P3: Tighter mobile navbar — target ~72-80px visual height */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar .container {
+    padding: 10px 16px;
+    min-height: 60px;
+  }
+  .nav-logo img {
+    height: 32px;
+  }
+  .hamburger-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* P5: Footer logo — subtle glow so it sits on dark background */
+.footer-brand img {
+  filter: drop-shadow(0 0 8px rgba(200, 169, 110, 0.25));
+  opacity: 0.9;
+}
+
+/* P6: Footer links — prevent wrapping */
+footer ul li a {
+  white-space: nowrap;
+}
+footer ul li {
+  white-space: nowrap;
+}
+
+/* P8: Portal cards (Login dropdown items) — centered & consistent on mobile */
+@media (max-width: 768px) {
+  .hbg-nav a[href*="appfolio"],
+  .hbg-nav a[href*="oportal"] {
+    text-align: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radius);
+    margin: 4px 16px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+/* P9: Card consistency — standardize all card types */
+@media (max-width: 768px) {
+  .service-card,
+  .content-block,
+  .sidebar-card,
+  .how-detail,
+  .vacancy-card,
+  .contact-block {
+    border-radius: 12px;
+    padding: 24px 20px;
+  }
+  .service-card h3,
+  .content-block h3,
+  .sidebar-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+  .service-card p,
+  .content-block p,
+  .sidebar-card p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+  .card-link {
+    margin-top: 16px;
+    font-size: 0.82rem;
+  }
+}
