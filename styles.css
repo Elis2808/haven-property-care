@@ -2411,7 +2411,7 @@ footer ul li a:hover { color: var(--gold); }
 }
 @media (min-width: 769px) {
   .how-mobile-accordion { display: none !important; }
-  .how-desktop-only { display: grid; }
+  .how-desktop-only { display: block; }
 }
 
 /* ===== POLISH PASS 2 — MOBILE ===== */
