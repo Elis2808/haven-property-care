@@ -7,7 +7,7 @@
   <meta name="description" content="Browse available rental properties managed by Haven Property Care across Florida." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=151" />
+  <link rel="stylesheet" href="styles.css?v=152" />
   <link rel="stylesheet" href="services-management.css?v=2" />
   <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
@@ -107,19 +107,32 @@
       <p class="section-sub">All properties are professionally managed. Contact us or log in to the Tenant Portal to apply.</p>
 
       <!-- AppFolio Live Listings Widget -->
-      <div class="listings-widget-container" style="margin-top: 40px;">
-        <script type='text/javascript' charset='utf-8'>
-          document.write(unescape("%3Cscript src='" + (('https:' == document.location.protocol) ? 'https:' : 'http:') + "//havenpropertycarellc.appfolio.com/javascripts/listing.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type='text/javascript' charset='utf-8'>
-          Appfolio.Listing({
-            hostUrl: 'havenpropertycarellc.appfolio.com',
-            themeColor: '#1a3a5c',
-            height: '700px',
-            width: '100%',
-            defaultOrder: 'date_posted'
-          });
-        </script>
+      <div class="listings-portal-wrap">
+        <div class="listings-portal-header">
+          <span class="section-label">AppFolio Portal</span>
+          <h3>Current Listings</h3>
+          <p>View available rental properties and apply online through our secure AppFolio portal.</p>
+        </div>
+        <div class="listings-widget-container">
+          <script type='text/javascript' charset='utf-8'>
+            document.write(unescape("%3Cscript src='" + (('https:' == document.location.protocol) ? 'https:' : 'http:') + "//havenpropertycarellc.appfolio.com/javascripts/listing.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type='text/javascript' charset='utf-8'>
+            Appfolio.Listing({
+              hostUrl: 'havenpropertycarellc.appfolio.com',
+              themeColor: '#1a3a5c',
+              height: '700px',
+              width: '100%',
+              defaultOrder: 'date_posted'
+            });
+          </script>
+        </div>
+        <div class="listings-empty-state">
+          <p class="listings-empty-icon">&#127968;</p>
+          <h4>No Current Vacancies</h4>
+          <p>Check back soon or contact us for upcoming availability.</p>
+          <a href="contact.html" class="btn btn-gold" style="margin-top:16px;">Contact Us</a>
+        </div>
       </div>
 
       <!-- CTA Band -->
@@ -187,8 +200,11 @@
   <!-- Mobile Bottom Navigation -->
   <nav class="mobile-bottom-nav" style="display:none;">
     <a href="index.html">Home</a>
-    <a href="services-management.html">Services</a>
+    <a href="services-management.html">Manage</a>
+    <a href="services-preservation.html">Preserve</a>
+    <a href="services-maintenance.html">Repairs</a>
     <a href="vacancies.html" class="active">Vacancies</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 
