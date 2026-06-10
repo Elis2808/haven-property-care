@@ -2411,7 +2411,7 @@ footer ul li a:hover { color: var(--gold); }
 }
 @media (min-width: 769px) {
   .how-mobile-accordion { display: none !important; }
-  .how-desktop-only { display: block; }
+  /* .how-desktop-only is also .how-layout (grid) — no override needed */
 }
 
 /* ===== POLISH PASS 2 — MOBILE ===== */
